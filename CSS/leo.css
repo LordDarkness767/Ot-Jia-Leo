@@ -1,0 +1,8 @@
+.flex-container{ /*Es el PADRE!!*/
+    display: flex;
+    flex-direction: row;
+}
+flex-elementos{
+    
+    
+}

@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.flex{
+  display: flex;
+}
+.flex1{
+  flex: 1;
+}
+ul{
+  display: flex;
+  justify-content: center;
+  
+}
+
+li{
+  margin: 10px;
+  list-style-type: none;
+
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+a:hover{
+  color: white;
+}
+a:visited{
+  color: blue;
+}
+.logo{
+  max-width: 100%;
+
+}
+main .container{
+  background-color: red;
+}
+
+header{
+  background-color: paleturquoise;
+  padding: 10px;
+}
+/* Jia Hao */
+img {
+  width: 30%;
+  height: auto;
+ 
+}
+
+.cubomedio {
+  display: flex;
+  justify-content: center;
+}
+
+.cubo {
+  border: 2px solid black;
+  padding: 9px;
+  margin-top: 1em;
+  margin: 1em;
+  text-align: center;
+}
