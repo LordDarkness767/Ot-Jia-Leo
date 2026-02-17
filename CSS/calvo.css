@@ -204,7 +204,6 @@
 
 /* Forma corta (la más usada) */
 
-
 * {
     margin: 0;
     padding: 0;
@@ -267,16 +266,16 @@
     flex-direction: column;     
     justify-content: center;    
     align-items: center;
-    height: 50px;
+    height: 100%;
     border: 2px solid black;   
   }
 
   .cuboimg {
     display: right;
     flex-direction: column;     
-    justify-content: center;    
-    align-items: center;
-    height: 50px;
+    justify-content: center;
+    align-self: flex-end;  
+    height: 100%;
     border: 2px solid black;   
   }
   
