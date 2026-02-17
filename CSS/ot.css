@@ -5,24 +5,110 @@
   text-decoration: none;
   font-size: 20px;
 }
-
+.center{
+  justify-content: center;
+}
+.acenter{
+  align-items: center;
+}
 header {
-  padding: 40px;
-  background-color: red;
+  padding: 35px;
+  background-color: rgb(170, 0, 255);
   justify-content: center;
 }
 
 header img {
   max-width: 40px;
 }
-
+#imagen_main{
+  width:60%;
+  justify-content: end;
+}
 .flex {
   display: flex;
 }
+.flex1{
+  flex: 1;
+}
 
-ul{
+ul {
   display: flex;
 }
-li{
+
+li {
   margin: 10px;
+}
+
+a:hover {
+  color: red;
+}
+
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Header arriba, contenido crece, footer abajo */
+  min-height: 100vh;
+  /* Ocupa toda la altura de la pantalla */
+  gap: 10px;
+}
+
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  /* Espacio entre los enlaces */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilos extra para visualización */
+.content {
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+  color: white;
+}
+/* Para pantallas menores a 493px */
+@media screen and (max-width: 493px) {
+  #imagen_main {
+    width: 100%;
+  }
+ 
+}
+.main{
+  background-color: red;
+ 
+}
+.img{
+  width: 30%;
+
+}
+.productos div { /* Esto afecta a los contenedores de imagen + botón */
+    flex-direction: column; /* Alinea los elementos uno debajo del otro */
+    padding: 15px;
+    background-color: white; /* Para que resalte sobre el fondo rojo */
+ 
+    margin: 10px;
+    text-align: center;
 }
