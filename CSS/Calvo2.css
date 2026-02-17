@@ -1,0 +1,170 @@
+/* =========================================================
+           ESTILOS GENERALES Y RESET
+           ========================================================= */
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* =========================================================
+           GRID SYSTEM (COLUMNAS)
+           ========================================================= */
+        .container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Bases para columnas */
+        [class*="col-"] {
+            /* Flexbox ignora float, pero mantenemos width */
+            width: 100%; 
+        }
+
+        /* Columnas Mobile First (por defecto 100%) */
+        .col-1 { width: 8.3333%; }
+        .col-2 { width: 16.6666%; }
+        .col-3 { width: 25%; }
+        .col-4 { width: 33.3333%; }
+        .col-5 { width: 41.6666%; }
+        .col-6 { width: 50%; }
+        .col-7 { width: 58.3333%; }
+        .col-8 { width: 66.6666%; }
+        .col-9 { width: 75%; }
+        .col-10 { width: 83.3333%; }
+        .col-11 { width: 91.6666%; }
+        .col-12 { width: 100%; }
+
+        /* Media Queries para Tablet y Desktop */
+        @media (min-width: 576px) {
+            .col-sm-3 { width: 25%; }
+            .col-sm-4 { width: 33.3333%; }
+            .col-sm-8 { width: 66.6666%; }
+        }
+        @media (min-width: 768px) {
+            .col-md-3 { width: 25%; }
+            .col-md-4 { width: 33.3333%; }
+            .col-md-8 { width: 66.6666%; }
+        }
+        @media (min-width: 992px) {
+            .col-lg-3 { width: 25%; }
+            .col-lg-4 { width: 33.3333%; }
+            .col-lg-8 { width: 66.6666%; }
+        }
+
+        /* =========================================================
+           FLEXBOX HELPERS
+           ========================================================= */
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; /* Para que sea responsivo */
+        }
+
+        .flex-align-prova {
+            display: flex;
+            flex-direction: row; /* Cambiado a row para el menú */
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* =========================================================
+           COMPONENTES ESPECÍFICOS
+           ========================================================= */
+        
+        /* Navegación */
+        header {
+            background-color: paleturquoise;
+            padding: 10px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        li {
+            margin: 10px;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        a:hover { color: white; }
+
+        /* Imágenes generales */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Estilos de las cajas */
+        .cubo {
+            border: 2px solid black;
+            padding: 9px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Estilo base para los posts */
+        .cubopost {
+            display: flex;
+            flex-direction: column; /* Por defecto columna (títulos, etc) */
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            padding: 10px;
+            width: 100%; /* Asegurar ancho */
+        }
+
+        /* --- NUEVO: Modificador para poner imagen y texto lado a lado --- */
+        .fila-imagen {
+            /* row-reverse: El 1º elemento (img) va a la derecha, el 2º (texto) a la izquierda */
+            flex-direction: row-reverse; 
+            align-items: center; /* Centra verticalmente */
+            text-align: left; /* Alinea el texto a la izquierda */
+        }
+        
+        /* Ajuste para pantallas muy pequeñas */
+        @media (max-width: 576px) {
+            .fila-imagen {
+                flex-direction: column; /* En móvil vuelve a columna normal */
+            }
+        }
+
+        .cuboimg {
+            /* align-self: flex-end; Elimino esto para que quede centrado con el texto */
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        .texto-lateral {
+            padding: 0 20px; /* Un poco de espacio entre imagen y texto */
+            font-size: 1.2rem;
+        }
+
+        .titulo, .subtitulo {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+        }
+
+        h1, h2 { margin: 0; }
+
+        /* Main layout margins */
+        main {
+            width: 100%;
+            padding: 10px;
+        }
