@@ -74,21 +74,23 @@ El projecte està organitzat en diferents carpetes per separar els fitxers segon
 
 OT-JIA-LEO/
 │
-├── index.html        → Pàgina principal del blog
-├── README.md         → Documentació del projecte
+├── index.html → Pàgina principal del blog
+├── README.md → Documentació del projecte
 │
-├── CSS/              → Estils de la web
-│   ├── calvo.css
-│   ├── Calvo2.css
-│   ├── leo.css
-│   ├── ot.css
-│   └── responsive.css
+├── CSS/ → Estils de la web
+│ ├── calvo.css
+│ ├── Calvo2.css
+│ ├── leo.css
+│ ├── ot.css
+│ └── responsive.css
 │
-├── html/             → Altres pàgines del blog
-│   ├── calvos.html
-│   └── gatos.html
+├── html/ → Altres pàgines del blog
+│ ├── calvos.html
+│ └── gatos.html
 │
-└── img/              → Imatges utilitzades a la web
+└── img/ → Imatges utilitzades a la web
+
+
 🧾 Explicació ràpida
 index.html → és el punt d’entrada de la web
 CSS/ → conté tots els estils per donar disseny a la pàgina
