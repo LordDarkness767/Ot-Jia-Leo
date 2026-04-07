@@ -1,8 +1,100 @@
-.flex-container{ /*Es el PADRE!!*/
-    display: flex;
-    flex-direction: row;
+#flex-container {
+    display: flex;            /* 1. Activamos Flexbox */
+    flex-wrap: wrap;          /* 2. CLAVE: Permite que las fotos bajen a la siguiente línea */
+    justify-content: center;  /* 3. Centra las fotos horizontalmente */
+    gap: 15px;                /* 4. Crea espacio uniforme entre las fotos */
+    padding: 20px;
+    background-color: #f0f0f0;
 }
-flex-elementos{
+
+.img-flex {
+    /* 5. Controlamos el tamaño de los hijos */
+    width: 400px;             /* Ancho fijo para todas */
+    height: 300px;            /* Alto fijo */
+    object-fit: cover;        /* Para que no se deformen al ser de distintos tamaños */
+    border-radius: 8px;       /* Un toque estético */
+    border: 2px solid #333;
     
+    /* 6. Flex-grow: esto le encantará a tu profe */
+    flex-grow: 1;             /* Hace que las imágenes se estiren para rellenar huecos */
+    max-width: 300px;         /* Pero que no crezcan demasiado */
+}
+#Prioritario{
+    flex : 1;
+}
+#botoncitogracioso{
+    background-color: brown;
+    text-shadow: 1px black;
     
+}
+#BarraNavegacion{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra todo verticalmente */
+    padding: 0 50px;     /* Un poco de margen a los lados para que no toquen el borde */
+    height: 80px;        /* Altura de la barra */
+    align-items: center;           /* Los centra verticalmente */
+    background-color: #7fffd4;     /* El color aguamarina que ya tienes */
+    padding: 15px 50px;            /* Espaciado interno para que no toquen los bordes */
+    width: 100%;                   /* Ocupa todo el ancho */
+    box-sizing: border-box;        /* Evita que el padding ensanche la página */
+    list-style: none;              /* Quita los puntos de la lista */
+    gap: 60px;                     /* Mayor espaciado entre los links */
+    margin: 0;
+    padding: 0;
+}
+#BarraNavegacion{
+    text-decoration: none;
+    color: #333;                   /* Color de texto más moderno */
+    font-size: 1.5rem;             /* Fuente más grande */
+    font-family: 'Arial', sans-serif; /* Fuente más limpia */
+    font-weight: bold;
+}
+
+/* .JS_boton{ */
+
+.MEOWW{
+    cursor: pointer;       /* Hace que el ratón cambie a la "manito" al pasar por encima */
+    transition: transform 0.2s; /* Para que el efecto sea suave */
+    /* 1. Tamaño más pequeño */
+    width: 70px;           /* Ajusta este número si la quieres más o menos pequeña */
+    height: 70px;          /* Debe ser igual al ancho */
+    
+    /* 2. El marco redondo */
+    border-radius: 50%;    /* Hace la imagen circular */
+    border: 4px solid #ffffff; /* Este es el "marco" (color blanco) */
+    
+    /* 3. Ajuste de la foto */
+    object-fit: cover;     /* Si la foto original es alargada, esto evita que se deforme */
+    
+    /* Opcional: un toque de estilo */
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3); /* Sombra para que resalte */
+    transition: transform 0.3s ease;
+}
+#contenedor-submarino{
+    text-decoration: none; /* Quita subrayados si los hubiera */
+    display: block;        /* Hace que todo el círculo sea clicable */
+    line-height: 0;        /* Evita espacios extraños debajo de la imagen */
+}
+.avatar:hover {
+    transform: scale(1.1); /* Se hace un poquito más grande al poner el ratón */
+    filter: brightness(1.2); /* Brilla un poco, como si se encendiera la luz del submarino */
+}
+
+#BarraNavegacion ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* Espacio entre links */
+    gap: 40px; 
+}
+
+
+.estrella-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5)); /* Resplandor dorado */
 }
