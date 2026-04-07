@@ -1,128 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  font-size: 20px;
-}
-.center{
-  justify-content: center;
-}
-.acenter{
-  align-items: center;
-}
-header {
-  padding: 35px;
-  background-color: rgb(170, 0, 255);
-  justify-content: center;
-}
-
-header img {
-  max-width: 40px;
-}
-#imagen_main{
-  width:10em;
+/* FLEX UTILS */
+.end {
   justify-content: end;
 }
+
 .flex {
   display: flex;
 }
-.flex1{
-  flex: 1;
-}
-.flex2{
-  flex: 2;
-}
 
-.flex3{
-  flex: 3;
+.center {
+  justify-content: center;
 }
+.espacio {
+  margin-right: 5px;
 
-.flex4{
-  flex: 4;
-}
-
-ul {
-  display: flex;
-}
-
-li {
-  margin: 10px;
-}
-
-a:hover {
-  color: red;
-}
-.tcenter{
-  text-align: center;
 }
 
 
-.container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  /* Header arriba, contenido crece, footer abajo */
-  min-height: 100vh;
-  /* Ocupa toda la altura de la pantalla */
-  gap: 10px;
-}
-
-
-.main-header {
-  display: flex;
-  justify-content: space-between;
-
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
-}
-
-.nav-links {
-  display: flex;
+/* CODE REAL */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   list-style: none;
-  gap: 20px;
-  /* Espacio entre los enlaces */
 }
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Estilos extra para visualización */
-.content {
+header{
+  background-color: blue;
   padding: 20px;
-  background: #f4f4f4;
-}
-
-.main-footer {
-  text-align: center;
-  padding: 10px;
-  background: #222;
-  color: white;
-}
-/* Para pantallas menores a 493px */
-@media screen and (max-width: 493px) {
-  #imagen_main {
-    width: 10%;
-  }
- 
-}
-.main{
-  background-color: red;
- 
-}
-.img{
-  width: 30%;
-
-}
-.productos div { /* Esto afecta a los contenedores de imagen + botón */
-    flex-direction: column; /* Alinea los elementos uno debajo del otro */
-    padding: 15px;
-    background-color: white; /* Para que resalte sobre el fondo rojo */
- 
-    margin: 10px;
-    text-align: center;
 }
