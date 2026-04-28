@@ -1,70 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calvos</title>
     <link rel="stylesheet" href="../CSS/calvo.css">
+    <link rel="stylesheet" href="../CSS/calvo2.css">
+    <script src="./../script/script.js"></script>
 </head>
 <body>
     <header>
-    <nav class="flex-align-prova">
-        <ul>
-            <li class="col-4 col-sm-4 col-md-4 col-lg-4"><a href="../index.html">Inicio</a></li>
-            <li class="col-4 col-sm-4 col-md-4 col-lg-4"><a href="calvos.html">Calvos</a></li>
-            <li class="col-4 col-sm-4 col-md-4 col-lg-4"><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-        
-        
-    </header>
-    <main class="flex-row">
-        <div class="cubopost titulo col-4 col-sm-4 col-md-4 col-lg-4">
-            <h1>Titol</h1>
+        <div class="lang-switcher">
+            <select id="langSelect">
+                <option value="es">Español</option>
+                <option value="ca">Català</option>
+                <option value="en">English</option>
+            </select>
         </div>
-        <div class="cubopost subtitulo col-8 col-sm-8 col-md-8 col-lg-8">
-            <h2>Subtitulo</h2>
+
+        <nav class="nav-grid">
+            <ul>
+                <li><a href="../index.html" i18n data-es="Inicio" data-ca="Inici" data-en="Home">Inicio</a></li>
+                <li><a href="calvos.html" i18n data-es="Calvos" data-ca="Calbs" data-en="Balds">Calvos</a></li>
+                <li><a href="#" i18n data-es="Contacto" data-ca="Contacte" data-en="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="header-grid">
+        <div class="cubopost titulo">
+            <h1 i18n data-es="Título" data-ca="Títol" data-en="Title">Título</h1>
+        </div>
+        <div class="cubopost subtitulo">
+            <h2 i18n data-es="Subtítulo" data-ca="Subtítol" data-en="Subtitle">Subtítulo</h2>
         </div>
     </main>
-    <main>
+
+    <main class="main-post-grid">
         <div class="cubopost">
             <div class="cubotext">
-                <h2>El calvo supremo</h2>
+                <h2 i18n data-es="El calvo supremo" data-ca="El calb suprem" data-en="The Supreme Bald">El calvo supremo</h2>
                 <br>
-                <p>Este es el calvo supremo, un calvo tan poderoso que si te da el brillo de su cabeza, te deja sin derechos.</p>
+                <p i18n data-es="Este es el calvo supremo, un calvo tan poderoso que si te da el brillo de su cabeza, te deja sin derechos." data-ca="Aquest és el calb suprem, un calb tan poderós que si et dona la brillantor del seu cap, et deixa sense drets." data-en="This is the supreme bald man, a bald so powerful that if the glare of his head hits you, it leaves you without rights.">Este es el calvo supremo, un calvo tan poderoso que si te da el brillo de su cabeza, te deja sin derechos.</p>
                 <br>
-                <p><strong>Poder:</strong> Calvicie extrema (Crea una onda de luz que te deja totalmente ciego durante 5 min).</p>
-                <p><strong>Especial:</strong> Usa un brillo especifico para dejarte sin derechos.</p>             
-                <p><strong>Destructividad:</strong> 58%</p>   
-                <p><strong>Fuerza:</strong> 66%</p>
-                <p><strong>Inteligencia:</strong> 39%</p>
-                <p><strong>Experiencia:</strong> 87%</p>
+                <p>
+                    <strong i18n data-es="Poder:" data-ca="Poder:" data-en="Power:">Poder:</strong> 
+                    <span i18n data-es="Calvicie extrema (Crea una onda de luz que te deja totalmente ciego durante 5 min)." data-ca="Calvície extrema (Crea una ona de llum que et deixa totalment cec durant 5 min)." data-en="Extreme baldness (Creates a light wave that leaves you completely blind for 5 min).">Calvicie extrema (Crea una onda de luz que te deja totalmente ciego durante 5 min).</span>
+                </p>
+                <p>
+                    <strong i18n data-es="Especial:" data-ca="Especial:" data-en="Special:">Especial:</strong> 
+                    <span i18n data-es="Usa un brillo especifico para dejarte sin derechos." data-ca="Utilitza una brillantor específica per deixar-te sense drets." data-en="Uses a specific glare to leave you without rights.">Usa un brillo especifico para dejarte sin derechos.</span>
+                </p>            
+                <p>
+                    <strong i18n data-es="Destructividad:" data-ca="Destructivitat:" data-en="Destructiveness:">Destructividad:</strong> <span>58%</span>
+                </p>   
+                <p>
+                    <strong i18n data-es="Fuerza:" data-ca="Força:" data-en="Strength:">Fuerza:</strong> <span>66%</span>
+                </p>
+                <p>
+                    <strong i18n data-es="Inteligencia:" data-ca="Intel·ligència:" data-en="Intelligence:">Inteligencia:</strong> <span>39%</span>
+                </p>
+                <p>
+                    <strong i18n data-es="Experiencia:" data-ca="Experiència:" data-en="Experience:">Experiencia:</strong> <span>87%</span>
+                </p>
             </div>
+            
             <div class="cuboimg imgpost">
+                <div class="cubotext">
+                    <h2 i18n data-es="El calvo supremo" data-ca="El calb suprem" data-en="The Supreme Bald">El calvo supremo</h2>
+                    <br>
+                    <p i18n data-es="Este es el calvo supremo, un calvo tan poderoso que si te da el brillo de su cabeza, te deja sin derechos." data-ca="Aquest és el calb suprem, un calb tan poderós que si et dona la brillantor del seu cap, et deixa sense drets." data-en="This is the supreme bald man, a bald so powerful that if the glare of his head hits you, it leaves you without rights.">Este es el calvo supremo, un calvo tan poderoso que si te da el brillo de su cabeza, te deja sin derechos.</p>
+                    <br>
+                    <p>
+                        <strong i18n data-es="Poder:" data-ca="Poder:" data-en="Power:">Poder:</strong> 
+                        <span i18n data-es="Calvicie extrema (Crea una onda de luz que te deja totalmente ciego durante 5 min)." data-ca="Calvície extrema (Crea una ona de llum que et deixa totalment cec durant 5 min)." data-en="Extreme baldness (Creates a light wave that leaves you completely blind for 5 min).">Calvicie extrema (Crea una onda de luz que te deja totalmente ciego durante 5 min).</span>
+                    </p>
+                    <p>
+                        <strong i18n data-es="Especial:" data-ca="Especial:" data-en="Special:">Especial:</strong> 
+                        <span i18n data-es="Usa un brillo especifico para dejarte sin derechos." data-ca="Utilitza una brillantor específica per deixar-te sense drets." data-en="Uses a specific glare to leave you without rights.">Usa un brillo especifico para dejarte sin derechos.</span>
+                    </p>            
+                    <p>
+                        <strong i18n data-es="Destructividad:" data-ca="Destructivitat:" data-en="Destructiveness:">Destructividad:</strong> <span>58%</span>
+                    </p>   
+                    <p>
+                        <strong i18n data-es="Fuerza:" data-ca="Força:" data-en="Strength:">Fuerza:</strong> <span>66%</span>
+                    </p>
+                    <p>
+                        <strong i18n data-es="Inteligencia:" data-ca="Intel·ligència:" data-en="Intelligence:">Inteligencia:</strong> <span>39%</span>
+                    </p>
+                    <p>
+                        <strong i18n data-es="Experiencia:" data-ca="Experiència:" data-en="Experience:">Experiencia:</strong> <span>87%</span>
+                    </p>
+                </div>
                 <img src="https://preview.redd.it/y-si-asdrubal-beck-es-realmente-el-calvo-supremo-y-lo-v0-fmota9x7fuya1.jpg?width=300&format=pjpg&auto=webp&s=111e12c5ffb05640a9c4cd2985e6d76f5485f215" alt="Calvo Supremo">
             </div>
         </div>
     </main>
-    <main class="flex-row">
-        <div class="cubo col-3 col-sm-3 col-md-3 col-lg-3">
-            <p>Calvo 1</p>
-            <img src="https://media.revistagq.com/photos/5ca5f090501e544b047c5948/16:9/w_1280,c_limit/hombres_calvos_atractivos_estudio_4439.jpg" alt="Calvo1">
+
+    <main class="grid-4-cols">
+        <div class="cubo">
+            <p i18n data-es="Calvo 1" data-ca="Calb 1" data-en="Bald 1">Calvo 1</p>
+            <img src="https://media.revistagq.com/photos/5ca5f090501e544b047c5948/16:9/w_1280,c_limit/hombres_calvos_atractivos_estudio_4439.jpg" alt="Calvo 1">
         </div>
-        <div class="cubo col-3 col-sm-3 col-md-3 col-lg-3">
-            <p>Calvo 2</p>
-            <video width="300" height="180" autoplay muted loop controls id="videoGato">
+        <div class="cubo">
+            <p i18n data-es="Calvo 2" data-ca="Calb 2" data-en="Bald 2">Calvo 2</p>
+            <video width="100%" height="auto" autoplay muted loop controls id="videoGato">
                 <source src="../videos/Calvo tocandose la cabeza.mp4" type="video/mp4">
                 Tu navegador no soporta el formato de video.
             </video>
         </div>
-        <div class="cubo col-3 col-sm-3 col-md-3 col-lg-3">
-            <p>Calvo 3</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjuJ_XXxN7kZK0HPwGttapepAsqtMmKETaSw&s" alt="Calvo3">
+        <div class="cubo">
+            <p i18n data-es="Calvo 3" data-ca="Calb 3" data-en="Bald 3">Calvo 3</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjuJ_XXxN7kZK0HPwGttapepAsqtMmKETaSw&s" alt="Calvo 3">
         </div>
-        <div class="cubo col-3 col-sm-3 col-md-3 col-lg-3">
-            <p>Calvo 4</p>
-            <img src="https://pisanohtc.es/wp-content/uploads/2021/08/quedando-calvo--1024x576.jpg" alt="Calvo3">
+        <div class="cubo">
+            <p i18n data-es="Calvo 4" data-ca="Calb 4" data-en="Bald 4">Calvo 4</p>
+            <img src="https://pisanohtc.es/wp-content/uploads/2021/08/quedando-calvo--1024x576.jpg" alt="Calvo 4">
         </div>
     </main>
+
+    <script src="../JS/tu_archivo.js"></script>
 </body>
 </html>
