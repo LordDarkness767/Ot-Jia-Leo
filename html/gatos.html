@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head> 
-        <meta  charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <title>Gatos xdxdxd</title>
         <link rel="stylesheet" href="../css/leo.css">
         <script src="../JS/carrusel.js"></script>
     </head>
     <body>
-        <img src="" alt="">
-        <button id="botoncitoGracioso" class= "JS_boton">REPRODUCIR SONIDO</button>
+
         <header>
             <nav id="BarraNavegacion">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../html/calvos.html">Calvos</a></li>
-                    <!-- <li><a href="../html/contacto.html">Contacto</a></li> -->
                     <li><a href="../html/gatos.html">Gatos</a></li>
-                    <!-- yo le llamo submarino porque es una ventana redonda -->
-                    <div class="contenedor-submarino">  
-                    <a href="/img/Img_LEO/Videos/Meowl.html"> 
+                </ul>
+                <div class="contenedor-submarino">
+                    <a href="/img/Img_LEO/Videos/Meowl.html">
                         <img src="/img/Img_LEO/Meowl.jpg" alt="Espectaculo" class="MEOWW">
                     </a>
                 </div>
-                </ul>
             </nav>
         </header>
-        <div class="carrusel-controles">
-        <button id="prevBtn">◀</button>
-        <button id="nextBtn">▶</button>
-    </div>
-        <div id="flex-container">
-            <img src="/img/Img_LEO/TOLEFAT.png" alt="Gato gordito" class="img-flex">
-            <img src="/img/Img_Leo/GatoFeo.png" alt="GatoFeo" class="img-flex">
-            <img src="/img/Img_LEO/gatito pequeño.jpg" alt="Gato 1" class="img-flex">
-            <img src="/img/Img_LEO/BAOOO.jpg" alt="Gato 2" class="img-flex">
-            <img src="/img/Img_LEO/gato drogata.jpg" alt="Gato 3" class="img-flex">
-            <img src="/img/Img_LEO/gatorelajado.jpg" alt="Gato 4" class="img-flex">
-            <img src="/img/Img_LEO/gatomanzana.png" alt="Gato 5" class="img-flex">
-            <img src="/img/Img_LEO/GatoGris.jpg" alt="Gato 6" class="img-flex">
-        </div>
-        <h1>SECCION HECHA CON <strong>GRID </strong> PURAMENTE</h1>
+
+        <button id="botoncitoGracioso" class="JS_boton">▶ REPRODUCIR SONIDO</button>
+
+        <!-- CARRUSEL -->
+        <section class="seccion-carrusel">
+            <div id="flex-container">
+                <img src="/img/Img_LEO/TOLEFAT.png"           alt="Gato gordito"  class="img-flex">
+                <img src="/img/Img_Leo/GatoFeo.png"           alt="Gato feo"      class="img-flex">
+                <img src="/img/Img_LEO/gatito pequeño.jpg"    alt="Gatito"        class="img-flex">
+                <img src="/img/Img_LEO/BAOOO.jpg"             alt="Baooo"         class="img-flex">
+                <img src="/img/Img_LEO/gato drogata.jpg"      alt="Gato drogata"  class="img-flex">
+                <img src="/img/Img_LEO/gatorelajado.jpg"      alt="Gato relajado" class="img-flex">
+                <img src="/img/Img_LEO/gatomanzana.png"       alt="Gato manzana"  class="img-flex">
+                <img src="/img/Img_LEO/GatoGris.jpg"          alt="Gato gris"     class="img-flex">
+            </div>
+            <div class="carrusel-controles">
+                <button id="prevBtn">◀</button>
+                <button id="nextBtn">▶</button>
+            </div>
+        </section>
+
+        <!-- GALERÍA FLEX -->
+        <h2 class="titulo-seccion">GALERÍA FLEX</h2>
+
+        <section class="fila-flex" id="fila-spacebetween">
+            <img src="/img/Img_LEO/TOLEFAT.png"        alt="Gato gordito"  class="tarjeta-flex">
+            <img src="/img/Img_Leo/GatoFeo.png"        alt="Gato feo"      class="tarjeta-flex">
+            <img src="/img/Img_LEO/gatito pequeño.jpg" alt="Gatito"        class="tarjeta-flex">
+        </section>
+
+        <section class="fila-flex" id="fila-spacearound">
+            <img src="/img/Img_LEO/BAOOO.jpg"          alt="Baooo"         class="tarjeta-flex">
+            <img src="/img/Img_LEO/gato drogata.jpg"   alt="Gato drogata"  class="tarjeta-flex">
+            <img src="/img/Img_LEO/gatorelajado.jpg"   alt="Gato relajado" class="tarjeta-flex">
+        </section>
+
+        <section class="fila-flex" id="fila-start">
+            <img src="/img/Img_LEO/gatomanzana.png"    alt="Gato manzana"  class="tarjeta-flex">
+            <img src="/img/Img_LEO/GatoGris.jpg"       alt="Gato gris"     class="tarjeta-flex">
+            <img src="/img/Img_LEO/TOLEFAT.png"        alt="Gato gordito"  class="tarjeta-flex">
+        </section>
+
+        <!-- GALERÍA GRID -->
+        <h2 class="titulo-seccion">GALERÍA GRID</h2>
+
         <div id="Mas-gatos" class="galeria-grid">
-            <img src="/img/Img_LEO/gatopensador.png" alt="Gato 1">
-            <img src="/img/Img_Leo/caquinha.jpg" alt="Gato 2">
-            <img src="/img/Img_LEO/toledistorted.png" alt="Gato 3">
-            <img src="/img/Img_LEO/TOLETOLETOLE.png" alt="Gato 4">
-            <img src="/img/Img_LEO/pallitascat.png" alt="Gato 5">
-            <img src="/img/Img_LEO/pallascat.png" alt="Gato 6">
-            
-        </div> 
+            <img src="/img/Img_LEO/gatopensador.png"   alt="Gato pensador">
+            <img src="/img/Img_Leo/caquinha.jpg"       alt="Caquinha">
+            <img src="/img/Img_LEO/toledistorted.png"  alt="Toledo distorted">
+            <img src="/img/Img_LEO/TOLETOLETOLE.png"   alt="Tole tole">
+            <img src="/img/Img_LEO/pallitascat.png"    alt="Pallitas cat">
+            <img src="/img/Img_LEO/pallascat.png"      alt="Pallas cat">
+        </div>
+
+        <!-- OSAKA -->
         <div class="estrella-container" id="contenedorEstrella">
-        <a href="#" id="linkEstrella">
-            <img src="/img/Img_LEO/OSAKA.jpg" alt="Osaka" class="OSAKA">
-        </a>
-</div>
+            <a href="#" id="linkEstrella">
+                <img src="/img/Img_LEO/OSAKA.jpg" alt="Osaka" class="OSAKA">
+            </a>
+        </div>
 
-<audio id="audioEstrella" src="../img/Img_LEO/Audio/tu-audio.mp3"></audio>
-        <audio id="MiSonido" src="/img/Img_LEO/Audio/audio1.mp3"></audio>
+        <audio id="audioEstrella" src="../img/Img_LEO/Audio/tu-audio.mp3"></audio>
+        <audio id="MiSonido"      src="/img/Img_LEO/Audio/audio1.mp3"></audio>
         <script src="../JS/SonidoDiabolico.js"></script>
-        
 
-    
     </body>
 </html>
