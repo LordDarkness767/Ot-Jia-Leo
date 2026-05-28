@@ -1,24 +1,8 @@
-/* =========================================================
-   FLEXBOX — GUÍA COMPLETA DE LO SIMPLE A LO AVANZADO
-   ========================================================= */
-
-
-/* =========================================================
-   1. FLEX BÁSICO
-   ========================================================= */
-
 /* Activa Flexbox en el contenedor */
 .flex-basico {
   display: flex;
   /* Convierte el contenedor en un flex container */
 }
-
-/* --------------------------------------------------------- */
-
-
-/* =========================================================
-   2. DIRECCIÓN DEL FLEX (flex-direction)
-   ========================================================= */
 
 /* Elementos en fila (por defecto) */
 .flex-row {
@@ -47,13 +31,6 @@
   flex-direction: column-reverse;
   /* De abajo a arriba */
 }
-
-/* --------------------------------------------------------- */
-
-
-/* =========================================================
-   3. JUSTIFICACIÓN EN EL EJE PRINCIPAL (justify-content)
-   ========================================================= */
 
 .flex-justify-start {
   display: flex;
@@ -91,12 +68,6 @@
   /* Espacio igual para todos */
 }
 
-/* --------------------------------------------------------- */
-
-
-/* =========================================================
-   4. ALINEACIÓN EN EL EJE SECUNDARIO (align-items)
-   ========================================================= */
 
 .flex-align-start {
   display: flex;
@@ -133,13 +104,6 @@
   /* Alinea por el texto */
 }
 
-/* --------------------------------------------------------- */
-
-
-/* =========================================================
-   5. FLEX WRAP (salto de línea)
-   ========================================================= */
-
 .flex-nowrap {
   display: flex;
   flex-wrap: nowrap;
@@ -157,14 +121,6 @@
   flex-wrap: wrap-reverse;
   /* Salta pero al revés */
 }
-
-/* --------------------------------------------------------- */
-
-
-/* =========================================================
-   6. ALINEACIÓN DE LÍNEAS (align-content)
-   SOLO FUNCIONA SI HAY WRAP
-   ========================================================= */
 
 .flex-align-content-start {
   display: flex;
@@ -202,13 +158,6 @@
   align-content: stretch;
 }
 
-/* --------------------------------------------------------- */
-
-
-/* =========================================================
-   7. FLEX EN LOS HIJOS (flex-grow, shrink, basis)
-   ========================================================= */
-
 .flex-item-grow {
   flex-grow: 1;
   /* Ocupa el espacio disponible */
@@ -223,8 +172,6 @@
   flex-basis: 200px;
   /* Tamaño base del elemento */
 }
-
-/* Forma corta (la más usada) */
 
 * {
   margin: 0;
@@ -275,14 +222,13 @@ header {
 
 /* Jia Hao */
 .imgpost {
-  width: 100em;
-  height: auto;
+  /* width: 100em; ¡ELIMINADO PORQUE ROMPÍA EL DISEÑO! */
+  width: 100%;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-
 }
 
 .cubo {
@@ -303,16 +249,17 @@ img {
 }
 
 .cubotext {
-  align-self: flex-start;
-  height: 100%;
-  width: 100%;
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  padding: 20px;
+  text-align: left;
 }
 
 .cuboimg {
-  flex-direction: column;
+  flex: 1; /* Ocupa el otro 50% del espacio disponible */
+  display: flex;
   justify-content: center;
-  align-self: flex-end;
-  border: 2px solid black;
+  align-items: center;
+  border: 2px solid black; /* Puedes quitar esta línea si no quieres un marco extra alrededor de la imagen */
 }
 
 .titulo,
@@ -537,4 +484,71 @@ img {
   .col-lg-12 {
     width: 100%;
   }
+}
+
+/* ========================================= */
+/* ESTILOS DEL NUEVO CARRUSEL INFERIOR       */
+/* ========================================= */
+.carrusel-contenedor {
+  position: relative;
+  width: 90%; 
+  max-width: 800px;
+  margin: 3em auto; /* Margen para separarlo de la cuadrícula de arriba */
+  overflow: hidden; 
+  border: 2px solid black;
+  background-color: #f0f8ff; /* Un fondo ligerito para destacarlo */
+}
+
+.carrusel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.slide {
+  min-width: 100%; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide.cubo {
+  margin: 0;
+  border: none;
+  padding: 20px;
+}
+
+.slide img {
+  max-height: 400px; /* Limita la altura para que no ocupe toda la pantalla */
+  width: auto;
+  object-fit: cover;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.carrusel-btn:hover {
+  background-color: black;
+}
+
+#btn-prev { left: 10px; }
+#btn-next { right: 10px; }
+
+/* Estilo específico para la imagen de Extra 2 */
+.img-extra-2 {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto; 
 }

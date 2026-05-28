@@ -1,31 +1,27 @@
+/* ========================================= */
+/* ESTILOS BASE Y MÓVIL (A partir de 380px)  */
+/* ========================================= */
+
 /* Estilos generales y del selector de idiomas */
 .lang-switcher {
     text-align: right;
     padding: 10px;
 }
 
-/* Navegación */
+/* Navegación - Móvil (1 columna, apilado) */
 .nav-grid ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-columns: 1fr;
     list-style: none;
     padding: 0;
     text-align: center;
     gap: 10px;
 }
 
-/* Grid para el título y subtítulo (1/3 para el título, 2/3 para subtítulo) */
-.header-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-/* Grid principal del Calvo Supremo (Texto a la izquierda, Imagen a la derecha) */
+/* Grid principal del Calvo Supremo - Móvil (Texto arriba, Imagen abajo) */
 .main-post-grid .cubopost {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: center;
     margin-bottom: 30px;
@@ -36,10 +32,10 @@
     height: auto;
 }
 
-/* Grid para los 4 calvos (4 columnas iguales) */
+/* Grid para los 4 calvos - Móvil (1 columna, uno debajo de otro) */
 .grid-4-cols {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -50,11 +46,41 @@
     object-fit: cover;
 }
 
-/* Responsividad básica para pantallas pequeñas (Móviles) */
-@media (max-width: 768px) {
-    .header-grid,
-    .main-post-grid .cubopost,
+
+/* ========================================= */
+/* TABLETS (A partir de 800px)               */
+/* ========================================= */
+
+@media (min-width: 800px) {
+    /* Navegación - Pasa a 3 columnas horizontales */
+    .nav-grid ul {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    /* Calvo Supremo - Pasa a 2 columnas (Mitad texto, mitad imagen) */
+    .main-post-grid .cubopost {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    /* 4 Calvos - Pasa a un formato de cuadrícula 2x2 */
     .grid-4-cols {
-        grid-template-columns: 1fr; /* Todo pasa a 1 sola columna en móviles */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+/* ========================================= */
+/* PC / ESCRITORIO (A partir de 1080px)      */
+/* ========================================= */
+
+@media (min-width: 1080px) {
+    /* Calvo Supremo - El texto toma más espacio (2/3) que la imagen (1/3) */
+    .main-post-grid .cubopost {
+        grid-template-columns: 2fr 1fr; 
+    }
+
+    /* 4 Calvos - Todos se colocan en una sola fila de 4 columnas */
+    .grid-4-cols {
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
